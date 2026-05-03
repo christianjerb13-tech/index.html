@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huellitas</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:20px;
+    background:#6b4f4f;
+    color:white;
+}
+
+/* LOGO */
+.logo{
+    width:450px;
+    border-radius:10px;
+}
+
+/* SECCIONES */
+section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+/* PRODUCTOS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    width:250px;
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* GALERÍA */
+.galeria img{
+    width:200px;
+    margin:10px;
+    border-radius:10px;
+}
+
+/* BOTÓN */
+.boton{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#6b4f4f;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* CONTACTO */
+.cta{
+    background:#6b4f4f;
+    color:white;
+    padding:40px;
+}
+
+.iconos img{
+    width:40px;
+    margin:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <!-- CAMBIA ESTO POR UNA RUTA SIMPLE -->
+    <img src="C:\Users\chris\OneDrive\Documentos\Pagina web Huellitas\logo-huellitas.jpg.jpeg" class="logo">
+    <h1>Huellitas</h1>
+    <p>Recuerdos que se llevan puestos en el corazón</p>
+</header>
+
+<section>
+    <h2>¿Qué es Huellitas?</h2>
+    <p>
+Huellitas es un proyecto que elabora figuras artesanales a partir del pelo de las mascotas, creando recuerdos únicos para sus dueños o para los que busquen contribuir con el medio ambiente. Al mismo tiempo, reutilizamos ropa en desuso para crear accesorios amigables para las mascotas, promoviendo el aprovechamiento responsable de los materiales y el cuidado del medio ambiente.
+    </p>
+</section>
+
+<!-- PRODUCTOS CON CLICK -->
+<section>
+    <h2>Productos</h2>
+
+    <div class="cards">
+        <div class="card" onclick="mostrar('figuras')">
+            <h3>Figuras con pelo</h3>
+            <p>Click para ver</p>
+        </div>
+
+        <div class="card" onclick="mostrar('accesorios')">
+            <h3>Accesorios reciclados</h3>
+            <p>Click para ver</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA DINÁMICA -->
+<section>
+    <h2>Galería</h2>
+
+    <!-- FIGURAS -->
+    <div id="figuras" class="galeria" style="display:none;">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-12 at 5.57.24 PM.jpeg">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-12 at 5.57.23 PM.jpeg">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-12 at 5.57.19 PM.jpeg">
+    </div>
+
+    <!-- ACCESORIOS -->
+    <div id="accesorios" class="galeria" style="display:none;">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-17 at 7.54.54 PM.jpeg">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-17 at 7.54.55 PM.jpeg">
+        <img src="C:\Users\chris\Downloads\WhatsApp Image 2026-04-12 at 6.02.47 PM.jpeg">
+    </div>
+
+</section>
+
+<section>
+    <h2>Sobre nosotros</h2>
+    <a href="Huellitas.html" class="boton">Ver más</a>
+</section>
+
+<div class="cta">
+    <h2>Contáctanos</h2>
+
+    <div class="iconos">
+        <a href="https://wa.me/">
+            <img src="C:\Users\chris\OneDrive\Imágenes\whatsapplogo.png">
+        </a>
+
+        <a href="https://instagram.com/">
+            <img src="C:\Users\chris\OneDrive\Imágenes\instalogo.webp">
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Huellitas</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function mostrar(tipo){
+    document.getElementById("figuras").style.display = "none";
+    document.getElementById("accesorios").style.display = "none";
+
+    document.getElementById(tipo).style.display = "block";
+}
+</script>
+
+</body>
+</html>
